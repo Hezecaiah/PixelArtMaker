@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         for(let j = 0;j < canvasWidth;j++){
             let tempBox = document.createElement("div")
-            tempBox.className = "pixel"
+            tempBox.classList.add("pixel")
             rowGen.appendChild(tempBox)
         }
 
@@ -23,12 +23,13 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     //generate the colors here
+    
 
     for(let i = 0;i < canvasHolder.getElementsByClassName("pixel").length;i++){
         canvasHolder.getElementsByClassName("pixel")[i].addEventListener("click", function() {
             console.log("hey you clicked this div: " + i + " which is" + canvasHolder.childNodes[i])
             var temp = canvasHolder.getElementsByClassName("pixel")[i]
-            temp.id = currentColor
+            temp.classList.add(currentColor) = currentColor
         })
     }
 
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(){
         paletteHolder.getElementsByClassName("color")[i].addEventListener("click", function() {
             console.log("hey you clicked this div: " + i + " which is" + canvasHolder.childNodes[i])
             var temp = paletteHolder.getElementsByClassName("color")[i]
-            currentColor = temp.id
+            currentColor = temp.classList[1]
         })
     }
 

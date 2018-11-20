@@ -24,18 +24,20 @@
     width: 50px;
 }
 
-#white{
+.white{
     background-color: white;
 }
 
-#red{
+.red{
     background-color: red;
 }
 
-#blue{
+.blue{
     background-color: blue;
 }
 
-#green{
+.green{
     background-color: green;
 }
+
+/* produce more colors and make a name array so you can generate that shit */
