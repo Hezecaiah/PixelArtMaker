@@ -27,6 +27,10 @@ h1{
     width: 50px;
 }
 
+#white{
+    background-color: white;
+}
+
 #red{
     background-color: red;
 }
