@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-h1{
-    color: green;
-}
 
 .canvas{
     display: flex;
@@ -10,9 +7,9 @@ h1{
 }
 
 .pixel{
-    border: 5px black solid;
-    height: 50px;
-    width: 50px;
+    border: 2px black solid;
+    height: 20px;
+    width: 20px;
 }
 
 .palette{
