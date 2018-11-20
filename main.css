@@ -1,7 +1,11 @@
 @charset "utf-8";
 
+body{
+    background-color: firebrick;
+}
 
 .canvas{
+    margin-left: 40px;
     display: flex;
     flex-direction: row;
 }
