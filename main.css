@@ -3,3 +3,38 @@
 h1{
     color: green;
 }
+
+.canvas{
+    display: flex;
+    flex-direction: row;
+}
+
+.pixel{
+    border: 5px black solid;
+    height: 50px;
+    width: 50px;
+}
+
+.palette{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.color{
+    border: 5px black solid;
+    height: 50px;
+    width: 50px;
+}
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#green{
+    background-color: green;
+}
