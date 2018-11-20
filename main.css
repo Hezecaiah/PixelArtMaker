@@ -32,12 +32,28 @@
     background-color: red;
 }
 
-.blue{
-    background-color: blue;
+.orange{
+    background-color: orange;
+}
+
+.yellow{
+    background-color: yellow;
 }
 
 .green{
     background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.indigo{
+    background-color: indigo;
+}
+
+.violet{
+    background-color: violet;
 }
 
 /* produce more colors and make a name array so you can generate that shit */
