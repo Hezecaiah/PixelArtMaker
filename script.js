@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var colorsToAdd = ["white","red","orange","yellow","green","blue","indigo","violet"]
 
-    var canvasWidth = 20
-    var canvasLength = 20
-    // var canvasWidth = window.prompt("how tall? (use reasonable numbers or i'll kill you(also nothing will show))")
-    // var canvasLength = window.prompt("how long?")
+    // var canvasWidth = 20
+    // var canvasLength = 20
+    var canvasWidth = window.prompt("how tall? (use reasonable numbers or i'll kill you(also nothing will show))")
+    var canvasLength = window.prompt("how long?")
 
     for(let i = 0;i < canvasLength;i++){
         var rowGen = document.createElement("div")
