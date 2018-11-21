@@ -4,7 +4,7 @@ body{
     background-color: firebrick;
 }
 
-.canvas{
+.canvasContainer{
     margin-left: 40px;
     display: flex;
     flex-direction: row;
@@ -16,7 +16,7 @@ body{
     width: 20px;
 }
 
-.palette{
+.paletteContainer{
     margin-top: 20px;
     display: flex;
     flex-direction: row;
