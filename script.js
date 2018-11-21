@@ -1,4 +1,5 @@
 var currentColor = "white"
+var clickHeld = false;
 var canvasHolder = document.getElementById("canvasFinder")
 var paletteHolder = document.getElementById("paletteFinder")
 var colorsToAdd = ["white","red","orange","yellow","green","blue","indigo","violet"]
@@ -10,7 +11,11 @@ document.addEventListener("DOMContentLoaded", function(){
     generateCanvas()
     generatePalette()
     assignClickListeners()
+    assignClickHeldListeners()
     assignPaletteListeners()
+    document.addEventListener("mouseup", function(){
+        clickHeld = false
+    })
 })
 
 function generateCanvas(){
@@ -19,6 +24,9 @@ function generateCanvas(){
         for(let j = 0;j < canvasWidth;j++){
             let tempBox = document.createElement("div")
             tempBox.classList.add("pixel","white")
+            tempBox.addEventListener("mousedown", function(){
+                clickHeld = true
+            })
             rowGen.appendChild(tempBox)
         }
         canvasHolder.appendChild(rowGen)
@@ -31,13 +39,28 @@ function generatePalette(){
         newColor.classList.add("color",colorsToAdd[i])
         paletteHolder.appendChild(newColor)
     }
+    var colorDisplay = document.createElement("div")
+    colorDisplay.classList.add("color", currentColor)
+    colorDisplay.addEventListener("change", function(){
+    })
 }
 
 function assignClickListeners(){
     for(let i = 0;i < canvasHolder.getElementsByClassName("pixel").length;i++){
-        canvasHolder.getElementsByClassName("pixel")[i].addEventListener("click", function() {
+        canvasHolder.getElementsByClassName("pixel")[i].addEventListener("mousedown", function() {
             var temp = canvasHolder.getElementsByClassName("pixel")[i]
             temp.classList.replace(temp.classList[1],currentColor)
+        })
+    }
+}
+
+function assignClickHeldListeners(){
+    for(let i = 0;i < canvasHolder.getElementsByClassName("pixel").length;i++){
+        canvasHolder.getElementsByClassName("pixel")[i].addEventListener("mouseover", function() {
+            if(clickHeld){
+                var temp = canvasHolder.getElementsByClassName("pixel")[i]
+                temp.classList.replace(temp.classList[1],currentColor)
+            }
         })
     }
 }
@@ -51,13 +74,10 @@ function assignPaletteListeners(){
     }
 }
 
-//TO DO: Move loops out of the onload as anonymous functions and declare them as functions. Per James:
-// If you want this to look even cleaner, moving all of your for loops out of the onload and making 
-// the functions then calling them inside the onload instead. Yours works great and looks good but if you want 
-// to make things easier to read and make things more manageable with larger code, divide you code into smaller
-// reusable functions.
-
+//TO DO:
+//Add div to display current color
+//Implement the fill drawing method
 //Implement the color selector mentioned in the prompt to work around implementing every single color in css
-//Implement the other drawing methods (holding down and dragging, maybe filling) mentioned in the readme
 
 //Stretch: Local storage, saving paintings. Make the mouse pointer look like a brush.
+//Implement bounding catches for the canvas size
