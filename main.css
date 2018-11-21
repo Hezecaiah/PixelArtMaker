@@ -60,5 +60,10 @@ body{
     background-color: violet;
 }
 
+#colorIndicator{
+    margin-left: 30px;
+    margin-right: 5px;
+}
+
 /* TO DO: Make it look pretty. Michael can probably help. Mouse pointer alteration to a brush probably also occurs
 here and not in the javascript.*/

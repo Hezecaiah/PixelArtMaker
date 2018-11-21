@@ -6,7 +6,6 @@ var colorsToAdd = ["white","red","orange","yellow","green","blue","indigo","viol
 var canvasWidth = window.prompt("How tall? (Please use reasonable numbers for the time being.", 20)
 var canvasLength = window.prompt("How long?", 20)
 
-
 document.addEventListener("DOMContentLoaded", function(){
     generateCanvas()
     generatePalette()
@@ -39,10 +38,17 @@ function generatePalette(){
         newColor.classList.add("color",colorsToAdd[i])
         paletteHolder.appendChild(newColor)
     }
+    var indicator = document.createElement("p")
+    indicator.id = "colorIndicator"
+    indicator.innerText = "Current Brush Color: "
+    paletteHolder.appendChild(indicator)
     var colorDisplay = document.createElement("div")
     colorDisplay.classList.add("color", currentColor)
-    colorDisplay.addEventListener("change", function(){
+    colorDisplay.id = "colorDisplay"
+    colorDisplay.addEventListener("onchange", function(){
+        colorDisplay.classList[1] = currentColor
     })
+    paletteHolder.appendChild(colorDisplay)
 }
 
 function assignClickListeners(){
@@ -70,14 +76,17 @@ function assignPaletteListeners(){
         paletteHolder.getElementsByClassName("color")[i].addEventListener("click", function() {
             var temp = paletteHolder.getElementsByClassName("color")[i]
             currentColor = temp.classList[1]
+            var display = document.getElementById("colorDisplay")
+            display.classList.replace(display.classList[1],currentColor)
         })
+        
     }
 }
 
 //TO DO:
-//Add div to display current color
 //Implement the fill drawing method
 //Implement the color selector mentioned in the prompt to work around implementing every single color in css
+//  -> Adjust current color event to work with color selector
 
 //Stretch: Local storage, saving paintings. Make the mouse pointer look like a brush.
 //Implement bounding catches for the canvas size
