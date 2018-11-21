@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function(){
     generateCanvas()
     generatePalette()
     assignClickListeners()
-    assignClickHeldListeners()
     assignPaletteListeners()
     document.addEventListener("mouseup", function(){
         clickHeld = false
@@ -57,11 +56,6 @@ function assignClickListeners(){
             var temp = canvasHolder.getElementsByClassName("pixel")[i]
             temp.classList.replace(temp.classList[1],currentColor)
         })
-    }
-}
-
-function assignClickHeldListeners(){
-    for(let i = 0;i < canvasHolder.getElementsByClassName("pixel").length;i++){
         canvasHolder.getElementsByClassName("pixel")[i].addEventListener("mouseover", function() {
             if(clickHeld){
                 var temp = canvasHolder.getElementsByClassName("pixel")[i]
