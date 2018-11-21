@@ -1,16 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(){
 
     var currentColor = "white"
-
     var canvasHolder = document.getElementById("canvas")
     var paletteHolder = document.getElementById("palette")
-
     var colorsToAdd = ["white","red","orange","yellow","green","blue","indigo","violet"]
-
-    // var canvasWidth = 20
-    // var canvasLength = 20
-    var canvasWidth = window.prompt("how tall? (use reasonable numbers or i'll kill you(also nothing will show))")
-    var canvasLength = window.prompt("how long?")
+    var canvasWidth = window.prompt("How tall? (Please use reasonable numbers for the time being.", 20)
+    var canvasLength = window.prompt("How long?", 20)
 
     for(let i = 0;i < canvasLength;i++){
         var rowGen = document.createElement("div")
@@ -41,7 +36,5 @@ document.addEventListener("DOMContentLoaded", function(){
             var temp = paletteHolder.getElementsByClassName("color")[i]
             currentColor = temp.classList[1]
         })
-    }
-
-    
+    }    
 })
