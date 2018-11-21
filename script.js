@@ -73,7 +73,6 @@ function assignPaletteListeners(){
             var display = document.getElementById("colorDisplay")
             display.classList.replace(display.classList[1],currentColor)
         })
-        
     }
 }
 
