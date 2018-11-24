@@ -3,7 +3,7 @@ var clickHeld = false;
 var canvasHolder = document.getElementById("canvasFinder")
 var paletteHolder = document.getElementById("paletteFinder")
 var colorsToAdd = ["white","red","orange","yellow","green","blue","indigo","violet"]
-var canvasWidth = window.prompt("How tall? (Please use reasonable numbers for the time being.", 20)
+var canvasWidth = window.prompt("How tall? (Please use reasonable numbers for the time being.)", 20)
 var canvasLength = window.prompt("How long?", 20)
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
     generatePalette()
     assignClickListeners()
     assignPaletteListeners()
+    assignColorPickerListener()
     document.addEventListener("mouseup", function(){
         clickHeld = false
     })
@@ -75,6 +76,14 @@ function assignPaletteListeners(){
         })
     }
 }
+
+function assignColorPickerListener(){
+    var pickerListener = document.getElementById("colorPicker")
+    pickerListener.addEventListener("change", function(){
+        currentColor = pickerListener.nodeValue
+    })
+}
+
 
 //TO DO:
 //Implement the fill drawing method
