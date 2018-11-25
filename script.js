@@ -36,7 +36,6 @@ function generateCanvas(){
         canvasHolder.getElementsByClassName("pixel")[i].addEventListener("mouseover", (event) => {
             if(clickHeld){
                 event.target.style.backgroundColor = currentColor
-
             }
         })
     }
@@ -79,11 +78,8 @@ function assignColorPickerListener(){
     })
 }
 
-
 //TO DO:
 //Implement the fill drawing method
-//Implement the color selector mentioned in the prompt to work around implementing every single color in css
-//  -> Adjust current color event to work with color selector
 
 //Stretch: Local storage, saving paintings. Make the mouse pointer look like a brush.
 //Implement bounding catches for the canvas size

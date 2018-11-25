@@ -27,38 +27,6 @@ body{
     height: 50px;
     width: 50px;
 }
-/* 
-.white{
-    background-color: white;
-}
-
-.red{
-    background-color: red;
-}
-
-.orange{
-    background-color: orange;
-}
-
-.yellow{
-    background-color: yellow;
-}
-
-.green{
-    background-color: green;
-}
-
-.blue{
-    background-color: blue;
-}
-
-.indigo{
-    background-color: indigo;
-}
-
-.violet{
-    background-color: violet;
-} */
 
 #colorIndicator{
     margin-left: 30px;
