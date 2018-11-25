@@ -3,10 +3,11 @@ var clickHeld = false;
 var canvasHolder = document.getElementById("canvasFinder")
 var paletteHolder = document.getElementById("paletteFinder")
 var colorsToAdd = ["white","red","orange","yellow","green","blue","indigo","violet"]
-var canvasWidth = window.prompt("How tall? (Please use reasonable numbers for the time being.)", 20)
-var canvasLength = window.prompt("How long?", 20)
+var canvasWidth = window.prompt("How tall? (50 pixels max.)", 20)
+var canvasLength = window.prompt("How long? (50 pixels max.)", 20)
 
 document.addEventListener("DOMContentLoaded", function(){
+    canvasBounding()
     generateCanvas()
     generatePalette()
     assignColorPickerListener()
@@ -14,6 +15,20 @@ document.addEventListener("DOMContentLoaded", function(){
         clickHeld = false
     })
 })
+
+function canvasBounding(){
+    if(canvasWidth > 50){
+        canvasWidth = 50
+        window.alert("Be reasonable. Width set to 50 arbitrarily.")
+    }
+    if(canvasLength > 50){
+        canvasLength = 50
+        window.alert("Be reasonable. Length set to 50 arbitrarily.")
+    }
+    if(canvasLength <= 0 || canvasWidth <= 0){
+        window.alert("You can't display a proper shape with negative sidelengths with human mathematics.")
+    }
+}
 
 function generateCanvas(){
     for(let i = 0;i < canvasLength;i++){
@@ -75,8 +90,6 @@ function assignColorPickerListener(){
     })
 }
 
-//TO DO:
-//Implement the fill drawing method
-
-//Stretch: Local storage, saving paintings. Make the mouse pointer look like a brush.
-//Implement bounding catches for the canvas size
+//Stretch:
+//  Implement a flood fill drawing method.
+//  Implement local storage, saving paintings. Make the mouse pointer look like a brush.
