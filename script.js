@@ -56,9 +56,6 @@ function generatePalette(){
     colorDisplay.classList.add("color")
     colorDisplay.style.backgroundColor = currentColor
     colorDisplay.id = "colorDisplay"
-    colorDisplay.addEventListener("onchange", function(){
-        colorDisplay.classList[1] = currentColor
-    })
     paletteHolder.appendChild(colorDisplay)
     for(let i = 0;i < paletteHolder.getElementsByClassName("color").length;i++){
         paletteHolder.getElementsByClassName("color")[i].addEventListener("click", function() {
