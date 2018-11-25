@@ -26,7 +26,9 @@ function canvasBounding(){
         window.alert("Be reasonable. Length set to 50 arbitrarily.")
     }
     if(canvasLength <= 0 || canvasWidth <= 0){
-        window.alert("You can't display a proper shape with negative sidelengths with human mathematics.")
+        window.alert("Euclidean geometric shape with negative sidelengths cannot be parsed by human perception. Sides set to 20x20 by default.")
+        canvasLength = 20
+        canvasWidth = 20
     }
 }
 
@@ -92,4 +94,6 @@ function assignColorPickerListener(){
 
 //Stretch:
 //  Implement a flood fill drawing method.
-//  Implement local storage, saving paintings. Make the mouse pointer look like a brush.
+//  Implement local storage, saving paintings.
+//  Fix the event listener malfunction on dragging a div.
+//  ---> The logic is sound, the event of dragging an element just needs to be accounted for.
