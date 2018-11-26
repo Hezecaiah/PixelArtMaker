@@ -3,7 +3,7 @@ var clickHeld = false;
 var canvasHolder = document.getElementById("canvasFinder")
 var paletteHolder = document.getElementById("paletteFinder")
 var colorsToAdd = ["white","red","orange","yellow","green","blue","indigo","violet"]
-var canvasWidth = window.prompt("How tall? (50 pixels max.)", 20)
+var canvasWidth = window.prompt("How wide? (50 pixels max.)", 20)
 var canvasLength = window.prompt("How long? (50 pixels max.)", 20)
 
 document.addEventListener("DOMContentLoaded", function(){
