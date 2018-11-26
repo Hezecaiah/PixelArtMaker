@@ -18,15 +18,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function canvasBounding(){
     if(canvasWidth > 50){
-        canvasWidth = 50
+        canvasWidth = 100
         window.alert("Be reasonable. Width set to 50 arbitrarily.")
     }
     if(canvasLength > 50){
-        canvasLength = 50
+        canvasLength = 100
         window.alert("Be reasonable. Length set to 50 arbitrarily.")
     }
     if(canvasLength <= 0 || canvasWidth <= 0){
-        window.alert("Euclidean geometric shape with negative sidelengths cannot be parsed by human perception. Sides set to 20x20 by default.")
+        window.alert("Negative side length given. Sides set to 20x20 by default.")
         canvasLength = 20
         canvasWidth = 20
     }
