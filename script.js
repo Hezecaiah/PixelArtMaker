@@ -91,9 +91,3 @@ function assignColorPickerListener(){
         document.getElementById("colorDisplay").style.backgroundColor = currentColor
     })
 }
-
-//Stretch:
-//  Implement a flood fill drawing method.
-//  Implement local storage, saving paintings.
-//  Fix the event listener malfunction on dragging a div.
-//  ---> The logic is sound, the event of dragging an element just needs to be accounted for.
