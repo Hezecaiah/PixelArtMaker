@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 function canvasBounding(){
-    if(canvasWidth > 50){
-        canvasWidth = 100
+    if(canvasWidth > 100){
+        canvasWidth = 50
         window.alert("Be reasonable. Width set to 50 arbitrarily.")
     }
-    if(canvasLength > 50){
-        canvasLength = 100
+    if(canvasLength > 100){
+        canvasLength = 50
         window.alert("Be reasonable. Length set to 50 arbitrarily.")
     }
     if(canvasLength <= 0 || canvasWidth <= 0){
@@ -33,9 +33,9 @@ function canvasBounding(){
 }
 
 function generateCanvas(){
-    for(let i = 0;i < canvasLength;i++){
+    for(let i = 0;i < canvasWidth;i++){
         var rowGen = document.createElement("div")
-        for(let j = 0;j < canvasWidth;j++){
+        for(let j = 0;j < canvasLength;j++){
             let tempBox = document.createElement("div")
             tempBox.classList.add("pixel")
             tempBox.style.backgroundColor = currentColor
