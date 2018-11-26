@@ -86,7 +86,7 @@ function generatePalette(){
 
 function assignColorPickerListener(){
     var pickerListener = document.getElementById("colorPicker")
-    pickerListener.addEventListener("change", (event) =>{
+    pickerListener.addEventListener("change", (event) => {
         currentColor = event.target.value
         document.getElementById("colorDisplay").style.backgroundColor = currentColor
     })
